@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Equity Link Backend",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

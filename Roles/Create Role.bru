@@ -1,0 +1,28 @@
+meta {
+  name: Create Role
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/api/roles
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+      "name": "custom role",
+      "permissions": [
+        "list-users",
+        "create-users",
+        "edit-users",
+        "delete-users",
+        "show-user"
+      ]
+  }
+}

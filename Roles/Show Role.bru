@@ -1,0 +1,23 @@
+meta {
+  name: Show Role
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/api/roles/3
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "Prueba",
+    "email": "emailtest1@test.com",
+    "role": "admin"
+  }
+}

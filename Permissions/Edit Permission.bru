@@ -1,0 +1,21 @@
+meta {
+  name: Edit Permission
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/api/permissions/25
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+      "name": "Limited-Admin"
+  }
+}

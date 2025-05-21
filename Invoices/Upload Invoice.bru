@@ -1,0 +1,20 @@
+meta {
+  name: Upload Invoice
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/api/invoices
+  body: multipartForm
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:multipart-form {
+  xml_file: @file(/Users/machochin/Downloads/Equity Link Exercise 02.xml)
+  ~xml_file: @file(/Users/machochin/Downloads/Equity Link Exercise 01.xml)
+}

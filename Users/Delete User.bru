@@ -1,0 +1,23 @@
+meta {
+  name: Delete User
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/api/users/3
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "Prueba",
+    "email": "emailtest1@test.com",
+    "role": "admin"
+  }
+}

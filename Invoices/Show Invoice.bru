@@ -1,0 +1,23 @@
+meta {
+  name: Show Invoice
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/api/invoices/CA54352E-10D2-4589-A3A7-BADEC7FCC557
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "Prueba",
+    "email": "emailtest1@test.com",
+    "role": "admin"
+  }
+}

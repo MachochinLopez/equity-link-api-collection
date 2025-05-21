@@ -1,0 +1,26 @@
+meta {
+  name: Edit User
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/api/users/3
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+      "name": "Limited Admin",
+      "email": "limited3@example.com",
+      "role": "employee",
+      "extra_permissions": [
+        "list-users"
+      ]
+  }
+}
